@@ -1,0 +1,71 @@
+#+TITLE: CSS
+
+* Background
+** background-color
+Set the background color of an element (using hex, rgb, named colored, etc)
+
+#+begin_src css
+body {
+    background-color: #FF0000; /* Set body BG to red */
+}
+#+end_src
+
+** background-image
+Set an element's background to an image
+
+#+begin_src css
+body {
+    background-image: url("images/background.png");
+}
+#+end_src
+
+** background-repeat
+Configure how to repeat a background image.
+
+By default, ~background-image~ repeats horizontally and vertically (x and y)
+
+Valid property values are:
+
+| Value       | Description                                                                                       |
+|-------------+---------------------------------------------------------------------------------------------------|
+| ~repeat~    | Repeated both vertically and horizontally. Last repetition is clipped if it doesn't fit perfectly |
+| ~repeat-x~  | Repeated only horizontally                                                                        |
+| ~repeat-y~  | Repeated only vertically                                                                          |
+| ~no-repeat~ | Image is only showed once (no repetition)                                                         |
+| ~space~     | Image is distributed evenly in order to not clip                                                  |
+| ~round~     | Image is repeated & squished/stretched to fill the space                                          |
+
+** background-position
+Specifies the position of the image
+
+*** Values
+Valid property values are:
+
+| Value   | Description |
+|---------+-------------|
+| [[#background-position-keywords][keyword]] |             |
+|         |             |
+|         |             |
+|         |             |
+
+*** Keyword Values
+:properties:
+:CUSTOM_ID: background-position-keywords
+Up to two keyword values can be specified. If only one is specified, the other value will be set to "center"
+
+The valid keywords are:
+- top
+- bottom
+- left
+- right
+- center
+
+As well as any combination of valid keywords.
+
+Example:
+#+begin_src css
+body {
+    background-image: url("images/background.png");
+    background-position: right center; /* The image's initial position will be the right center of the screen */
+}
+#+end_src
