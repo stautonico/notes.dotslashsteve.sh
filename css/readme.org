@@ -41,16 +41,14 @@ Specifies the position of the image
 *** Values
 Valid property values are:
 
-| Value   | Description |
-|---------+-------------|
-| [[#background-position-keywords][keyword]] |             |
-|         |             |
-|         |             |
-|         |             |
+- [[#background-position-keywords][keyword]]
+- [[#background-position-percent][percent]]
+- [[#background-position-pixels][pixels/other units]]
 
 *** Keyword Values
 :properties:
 :CUSTOM_ID: background-position-keywords
+:end:
 Up to two keyword values can be specified. If only one is specified, the other value will be set to "center"
 
 The valid keywords are:
@@ -69,3 +67,23 @@ body {
     background-position: right center; /* The image's initial position will be the right center of the screen */
 }
 #+end_src
+
+*** Percent Values
+:properties:
+:CUSTOM_ID: background-position-percent
+:end:
+Up to two percent values can be specified. If only one value is specified, the other value will be set to ~50%~
+The default value is ~0% 0%~
+
+The top left corner is ~0% 0%~ and the bottom right corner is ~100% 100%~
+
+*** Pixel/Other CSS Units Values
+:properties:
+:CUSTOM_ID: background-position-pixels
+:end:
+A manual pixel value can be specified as an offset starting position for the background image.
+Pixel and percent values can be mixed.
+
+The top left corner is ~0px 0px~ and the bottom right corner is ~<container width>px <container height>px~
+
+This value can be any valid CSS unit (such as pixels, rem, em, etc)
